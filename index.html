@@ -2,12 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Do It Now</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-paper w-full">
+    <div class="max-w-2xl w-full h-dvh bg-black/70 mx-auto flex-col justify-between">
+      <main id="todo-container" class="w-130 h-4/5 bg-black">
+
+        <button id="button" class="h-10 w-20 border bg-amber-200">CLICK</button>
+
+        <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
+          <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
+          <p class="font-sans -ml-1 text-[15px] font-normal">Strech for 5 mins</p>
+        </div>
+
+
+
+      </main>
+      <div class="w-130 h-20 bg-amber-500"></div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

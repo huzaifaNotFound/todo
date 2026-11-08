@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+  --color-paper: #EEEADD;   /* Page background */
+  --color-blush: #F0E0DC;   /* Completed tray card */
+  --color-card: #F6F2EF;    /* Task rows, inputs */
+  --color-chip: #E4D5C8;    /* Selected group, progress track */
+  --color-line: #D9CEC6;    /* Borders on finished tasks, idle chips */
+  --color-accent: #A9694E;  /* Group labels, focus ring */
+  --color-btn: #353030;     /* Add button, progress fill */
+  --color-btnink: #F6F2EF;  /* Text on dark buttons */
+  --color-ink: #1B1716;     /* Main text */
+  --color-muted: #857B75;   /* Done tasks, hints */
+
+  --font-display: "Bricolage Grotesque", "Georgia", serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+
+  --animate-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
