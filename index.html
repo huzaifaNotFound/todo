@@ -13,20 +13,23 @@
     <title>Do It Now</title>
   </head>
   <body class="bg-paper w-full">
-    <div class="max-w-2xl w-full h-dvh bg-black/70 mx-auto flex-col justify-between">
+    <div class="max-w-2xl w-full h-dvh bg-black/70 mx-auto flex flex-col justify-end items-center">
       <main id="todo-container" class="w-130 h-4/5 bg-black">
 
-        <button id="button" class="h-10 w-20 border bg-amber-200">CLICK</button>
+        
 
         <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
           <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
-          <p class="font-sans -ml-1 text-[15px] font-normal">Strech for 5 mins</p>
+          <p class="font-sans -ml-1 text-[15px] font-normal text-ink">Strech for 5 mins</p>
         </div>
 
 
 
       </main>
-      <div class="w-130 h-20 bg-amber-500"></div>
+      <div class="w-130 h-25 bg-amber-500 flex pb-5 items-center">
+        <input type="text" placeholder="Write a task..." class="flex-1 rounded-[10px] bg-card p-3 pl-4 h-13 font-sans tracking-wide font-medium text-ink">
+        <button id="button" class="h-10 w-20 border bg-amber-200">CLICK</button>
+      </div>
     </div>
 
     <script type="module" src="/src/main.js"></script>
