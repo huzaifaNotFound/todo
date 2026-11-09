@@ -38,6 +38,7 @@
 
 .todo-row {
   border: 1px solid transparent;
+  outline-color: var(--color-muted);
   transition:
     background-color var(--duration-base),
     border-color var(--duration-base),
@@ -51,6 +52,7 @@
 .todo-row.is-completed {
   background-color: var(--color-okbg);
   border-color: var(--color-okline, #c3d7bc);
+  outline-color: var(--color-ok);
 }
 
 .is-completed .task-text {

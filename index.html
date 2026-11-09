@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Do It Now</title>
   </head>
-  <body class="bg-paper w-full">
+  <body class="bg-paper w-full selection:bg-accent selection:text-card">
     <div class="max-w-5xl w-full h-svh mx-auto flex items-end justify-center">
       <!-- info box -->
       <section class="w-70 h-6 self-start mt-[11svh] flex flex-col mr-8">
@@ -35,17 +35,68 @@
       <!-- main todo sectn -->
       <main class="relative w-130 h-8/9 flex flex-col justify-between">
         <div id="todo-container" class="w-130 flex-1 overflow-y-auto">
-          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer">
-            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
-            <p class="font-sans -ml-1 text-[15px] font-normal text-ink">Strech for 5 mins</p>
+          <div
+            id="todo"
+            class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
+            aria-checked="false"
+            tabindex="0"
+          >
+            <div class="relative w-6 h-6 border-muted rounded-md border-[1.5px] mx-4 shrink-0 checkbox">
+              <svg class="absolute w-8 h-8 -top-2 -left-1 text-ok overflow-visible" viewBox="0 0 32 32" fill="none">
+                <path
+                  class="check-path"
+                  d="M4 16L12 24L28 5"
+                  pathLength="100"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">Stretch for 5 mins</p>
           </div>
-          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer">
-            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
-            <p class="font-sans -ml-1 text-[15px] font-normal text-ink">Strech for 5 mins</p>
+         <div
+            id="todo"
+            class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
+            aria-checked="false"
+            tabindex="0"
+          >
+            <div class="relative w-6 h-6 border-muted rounded-md border-[1.5px] mx-4 shrink-0 checkbox">
+              <svg class="absolute w-8 h-8 -top-2 -left-1 text-ok overflow-visible" viewBox="0 0 32 32" fill="none">
+                <path
+                  class="check-path"
+                  d="M4 16L12 24L28 5"
+                  pathLength="100"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">5 Pushups</p>
           </div>
-          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer">
-            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
-            <p class="font-sans -ml-1 text-[15px] font-normal text-ink">Strech for 5 mins</p>
+          <div
+            id="todo"
+            class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
+            aria-checked="false"
+            tabindex="0"
+          >
+            <div class="relative w-6 h-6 border-muted rounded-md border-[1.5px] mx-4 shrink-0 checkbox">
+              <svg class="absolute w-8 h-8 -top-2 -left-1 text-ok overflow-visible" viewBox="0 0 32 32" fill="none">
+                <path
+                  class="check-path"
+                  d="M4 16L12 24L28 5"
+                  pathLength="100"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">Pullups</p>
           </div>
 
           <div
@@ -67,7 +118,7 @@
                 />
               </svg>
             </div>
-            <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">Stretch for 5 mins</p>
+            <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">Clean Bedroom</p>
           </div>
         </div>
 
