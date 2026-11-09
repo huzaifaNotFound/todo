@@ -13,23 +13,63 @@
     <title>Do It Now</title>
   </head>
   <body class="bg-paper w-full">
-    <div class="max-w-2xl w-full h-dvh bg-black/70 mx-auto flex flex-col justify-end items-center">
-      <main id="todo-container" class="w-130 h-4/5 bg-black">
 
-        
+    <div class="max-w-5xl w-full h-svh mx-auto flex items-end justify-center">
 
-        <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
-          <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
-          <p class="font-sans -ml-1 text-[15px] font-normal text-ink">Strech for 5 mins</p>
+      <!-- info box -->
+      <section class="w-70 h-6 self-start mt-[11svh] flex flex-col mr-8">
+        <div class="flex-3">
+          <h1 class="font-display font-extrabold text-[40px] text-ink">Today</h1>
+          <p class="font-sans font-normal text-[14px] text-muted -mt-1.5">Monday, November 9</p>
+
+            <!-- progress bar -->
+          <div class="w-full bg-chip rounded-full h-1.5 mt-6">
+            <div id="progress" class="bg-btn h-1.5 rounded-full" style="width: 25%;" ></div>
+          </div>
+
+          <p class="font-sans font-normal text-[14px] text-muted mt-2 "><span id="completed-todo-count">1</span> of <span id="total-todo-count">4</span> done</p>
+        </div>
+        <div class="flex-2 bg-amber-800"></div>
+      </section>
+
+      <!-- main todo sectn -->
+      <main class="relative w-130 h-8/9 flex flex-col justify-between">
+        <div id="todo-container" class="w-130 flex-1 overflow-y-auto">
+          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
+            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
+            <p class="font-sans -ml-1 text-[15px] font-normal">Strech for 5 mins</p>
+          </div>
+          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
+            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
+            <p class="font-sans -ml-1 text-[15px] font-normal">Strech for 5 mins</p>
+          </div>
+          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
+            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
+            <p class="font-sans -ml-1 text-[15px] font-normal">Strech for 5 mins</p>
+          </div>
+          <div id="todo" class="w-full h-13 rounded-xl bg-card flex items-center mb-2.5">
+            <div class="w-6 h-6 border-muted rounded-md border-[1.5px] mx-4"></div>
+            <p class="font-sans -ml-1 text-[15px] font-normal">Strech for 5 mins</p>
+          </div>
+          
         </div>
 
-
-
+        <!-- add tasks section -->
+        <section class="w-130 h-25 flex pb-5 items-center">
+          <input
+            id="input"
+            type="text"
+            placeholder="Write a task..."
+            class="focus:outline-none flex-1 rounded-[10px] bg-card p-3 pl-4 h-13 font-sans tracking-wide font-medium text-ink"
+          />
+          <button
+            id="button"
+            class="h-13 w-22 font-medium bg-btn rounded-[10px] ml-2 text-btnink font-sans cursor-pointer"
+          >
+            Add
+          </button>
+        </section>
       </main>
-      <div class="w-130 h-25 bg-amber-500 flex pb-5 items-center">
-        <input type="text" placeholder="Write a task..." class="flex-1 rounded-[10px] bg-card p-3 pl-4 h-13 font-sans tracking-wide font-medium text-ink">
-        <button id="button" class="h-10 w-20 border bg-amber-200">CLICK</button>
-      </div>
     </div>
 
     <script type="module" src="/src/main.js"></script>

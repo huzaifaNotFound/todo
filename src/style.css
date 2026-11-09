@@ -1,16 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #EEEADD;   /* Page background */
-  --color-blush: #F0E0DC;   /* Completed tray card */
-  --color-card: #F6F2EF;    /* Task rows, inputs */
-  --color-chip: #E4D5C8;    /* Selected group, progress track */
-  --color-line: #D9CEC6;    /* Borders on finished tasks, idle chips */
-  --color-accent: #A9694E;  /* Group labels, focus ring */
-  --color-btn: #353030;     /* Add button, progress fill */
-  --color-btnink: #F6F2EF;  /* Text on dark buttons */
-  --color-ink: #1B1716;     /* Main text */
-  --color-muted: #857B75;   /* Done tasks, hints */
+  --color-paper: #eeeadd; /* Page background */
+  --color-blush: #f0e0dc; /* Completed tray card */
+  --color-card: #f6f2ef; /* Task rows, inputs */
+  --color-chip: #e4d5c8; /* Selected group, progress track */
+  --color-line: #d9cec6; /* Borders on finished tasks, idle chips */
+  --color-accent: #a9694e; /* Group labels, focus ring */
+  --color-btn: #353030; /* Add button, progress fill */
+  --color-btnink: #f6f2ef; /* Text on dark buttons */
+  --color-ink: #1b1716; /* Main text */
+  --color-muted: #857b75; /* Done tasks, hints */
+  --color-ok: #4F7A5A; /* completed task text, tick box */
+  --color-okbg: #e0ebd9; /* completed task row*/
+  --color-okline: #c3d7bc; /* completed task border*/
+  --color-pinbg: #f3e0d5; /* pinned group chip*/
+  --color-danger: #a4483c; /* delete confirmation*/
 
   --font-display: "Bricolage Grotesque", "Georgia", serif;
   --font-sans: "Instrument Sans", system-ui, sans-serif;
