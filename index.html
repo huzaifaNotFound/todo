@@ -15,28 +15,68 @@
   <body class="bg-paper w-full selection:bg-accent selection:text-card">
     <div class="max-w-5xl w-full h-svh mx-auto flex items-end justify-center">
       <!-- info box -->
-      <section class="w-70 h-6 self-start mt-[11svh] flex flex-col mr-8">
+      <section class="w-70 h-6 self-start mt-[11svh] flex flex-col mr-16">
         <div class="flex-3">
           <h1 class="font-display font-extrabold text-[40px] text-ink">Today</h1>
-          <p class="font-sans font-normal text-[14px] text-muted -mt-1.5">Monday, November 9</p>
+          <p id="date" class="font-sans font-normal text-[14px] text-muted -mt-1.5">Monday, November 9</p>
 
           <!-- progress bar -->
-          <div class="w-full bg-chip rounded-full h-1.5 mt-6">
-            <div id="progress" class="bg-btn h-1.5 rounded-full" style="width:0%; transition: width 500ms var(--ease-bounce)"></div>
+          <div class="w-full bg-chip rounded-full h-1.5 mt-6 overflow-hidden">
+            <div
+              id="progress"
+              class="bg-btn h-1.5 rounded-full"
+              style="width: 0%; transition: width 400ms var(--ease-bounce)"
+            ></div>
           </div>
 
           <p class="font-sans font-normal text-[14px] text-muted mt-2">
             <span id="completed-todo-count">1</span> of <span id="total-todo-count">4</span> done
           </p>
         </div>
-        <div class="flex-2 bg-amber-800"></div>
+
+        <!-- date cardss -->
+        <div class="flex-2 w-full mt-4 flex justify-between">
+          <div class="group w-12.5 h-14.5 border border-muted/30 rounded-xl flex flex-col items-center font-sans p-1 pt-1.5 cursor-pointer
+          hover:-translate-y-0.5 hover:bg-chip hover:border-none transition-all duration-300">
+            <span class="group-hover:text-ink transition-all duration-300 font-medium text-[10px] tracking-widest text-muted uppercase mb-0.5">Wed</span>
+            <span class="group-hover:text-ink transition-all duration-300 font-bold text-[15px] text-muted">9</span>
+            <span class="text-accent "></span>
+          </div>
+
+          <div class=" group w-12.5 h-14.5 border border-muted/30 rounded-xl flex flex-col items-center font-sans p-1 pt-1.5 cursor-pointer
+          hover:-translate-y-0.5 hover:bg-chip hover:border-none transition-all duration-300">
+            <span class="group-hover:text-ink transition-all duration-300 font-medium text-[10px] tracking-widest text-muted uppercase mb-0.5">Wed</span>
+            <span class="group-hover:text-ink transition-all duration-300 font-bold text-[15px] text-muted">10</span>
+            <span class="text-accent"></span>
+          </div>
+
+          <div
+            class="w-12.5 h-14.5 border border-none rounded-xl flex flex-col items-center font-sans bg-btn p-1 pt-1.5 cursor-pointer">
+            <span class="font-semibold text-[10px] tracking-widest text-white uppercase mb-0.5">Wed</span>
+            <span class="font-bold text-[15px] text-white">11</span>
+            <span class="w-1 h-1 rounded-full bg-accent mt-auto mb-0.5"></span>
+          </div>
+
+          <div class="group w-12.5 h-14.5 border border-muted/30 rounded-xl flex flex-col items-center font-sans p-1 pt-1.5 cursor-pointer
+          hover:-translate-y-0.5 hover:bg-chip hover:border-none transition-all duration-300">
+            <span class="group-hover:text-ink transition-all duration-300 font-medium text-[10px] tracking-widest text-muted uppercase mb-0.5">Wed</span>
+            <span class="group-hover:text-ink transition-all duration-300 font-bold text-[15px] text-muted">12</span>
+            <span class="text-accent"></span>
+          </div>
+
+          <div class="group w-12.5 h-14.5 border border-muted/30 rounded-xl flex flex-col items-center font-sans p-1 pt-1.5 cursor-pointer
+          hover:-translate-y-0.5 hover:bg-chip hover:border-none transition-all duration-300">
+            <span class="group-hover:text-ink transition-all duration-300 font-medium text-[10px] tracking-widest text-muted uppercase mb-0.5">Wed</span>
+            <span class="group-hover:text-ink transition-all duration-300 font-bold text-[15px] text-muted">13</span>
+            <span class="text-accent"></span>
+          </div>
+        </div>
       </section>
 
       <!-- main todo sectn -->
       <main class="relative w-130 h-8/9 flex flex-col justify-between">
         <div id="todo-container" class="w-130 flex-1 overflow-y-auto overflow-x-hidden">
           <div
-            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -56,8 +96,7 @@
             </div>
             <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">Stretch for 5 mins</p>
           </div>
-         <div
-            
+          <div
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -78,7 +117,6 @@
             <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">5 Pushups</p>
           </div>
           <div
-            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -100,7 +138,6 @@
           </div>
 
           <div
-            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -141,5 +178,6 @@
     </div>
 
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/date.js"></script>
   </body>
 </html>

@@ -58,7 +58,7 @@
 .is-completed .task-text {
   color: var(--color-ok);
   text-decoration: line-through;
-  text-decoration-color: var(--color-okline, #c3d7bc);
+  text-decoration-color: var(--color-ok)
 }
 
 
