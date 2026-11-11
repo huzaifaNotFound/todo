@@ -16,45 +16,45 @@ input.addEventListener("keydown", (e) => {
 });
 
 // cards enter and click handlers
-todoContainer.addEventListener("click", (e)=>{
-  const todo = e.target.closest(".todo-row")
+todoContainer.addEventListener("click", (e) => {
+  const todo = e.target.closest(".todo-row");
 
-   if (!todo || !todoContainer.contains(todo)) return;
+  if (!todo || !todoContainer.contains(todo)) return;
 
-   toggleTodo(todo)
-})
+  toggleTodo(todo);
+});
 
-todoContainer.addEventListener("keydown", (e)=>{
-  const todo = e.target.closest(".todo-row")
+todoContainer.addEventListener("keydown", (e) => {
+  const todo = e.target.closest(".todo-row");
 
-  if (!todo || !todoContainer.contains(".todo-row")) return;
+  if (!todo || !todoContainer.contains(todo)) return;
 
-  if (e.key === "Enter"){
-    e.key.preventDefault();
-    toggleTodo(todo)
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    toggleTodo(todo);
   }
-})
+});
 
-function toggleTodo(todo){
-  const completed = todo.classList.toggle("is-completed")
+function toggleTodo(todo) {
+  const completed = todo.classList.toggle("is-completed");
 
-  todo.setAttribute("aria-checked", completed);
+  todo.setAttribute("aria-checked", String(completed));
 
-  progressUpdate()
+  progressUpdate();
 }
 
 // todo add handler
 btn.addEventListener("click", () => {
- 
-  const todo = input.value.trim()
+  const todo = input.value.trim();
 
   if (!todo) return;
 
   const capitalizedTodo = todo.charAt(0).toUpperCase() + todo.slice(1);
 
-   const todoDiv = `
+  const todoDiv = `
     <div
       class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
+      role="checkbox"
       aria-checked="false"
       tabindex="0"
     >
@@ -81,41 +81,29 @@ btn.addEventListener("click", () => {
 
       </div>
 
-      <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">
-        ${capitalizedTodo}
-      </p>
+      <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink"></p>
 
     </div>
   `;
 
   todoContainer.insertAdjacentHTML("beforeend", todoDiv);
 
+  todoContainer.lastElementChild.querySelector(".task-text").textContent = capitalizedTodo;
+
   input.value = "";
 
-  progressUpdate()
-
-  
+  progressUpdate();
 });
 
-function progressUpdate(completedTodoCount) {
-  const todos = todoContainer.querySelectorAll(".todo-row")
+function progressUpdate() {
+  const totalTodos = todoContainer.querySelectorAll(".todo-row").length;
+  const completedTodos = todoContainer.querySelectorAll(".todo-row.is-completed").length;
 
-  const totalTodos = todos.length;
-
-  const completedTodos = todoContainer.querySelectorAll(
-    ".todo-row.is-completed"
-  ).length;
-
-
-  const percentage = totalTodos === 0
-    ? 0
-    : (completedTodos / totalTodos) * 100;
-
+  const percentage = totalTodos === 0 ? 0 : (completedTodos / totalTodos) * 100;
 
   progressBar.style.width = `${percentage}%`;
   completedTodoCountSpan.textContent = completedTodos;
   totalTodoCountSpan.textContent = totalTodos;
-
 }
 
-progressUpdate()
+progressUpdate();
