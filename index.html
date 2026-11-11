@@ -22,7 +22,7 @@
 
           <!-- progress bar -->
           <div class="w-full bg-chip rounded-full h-1.5 mt-6">
-            <div id="progress" class="bg-btn h-1.5 rounded-full" style="width: 25%"></div>
+            <div id="progress" class="bg-btn h-1.5 rounded-full" style="width:0%; transition: width 500ms var(--ease-bounce)"></div>
           </div>
 
           <p class="font-sans font-normal text-[14px] text-muted mt-2">
@@ -34,9 +34,9 @@
 
       <!-- main todo sectn -->
       <main class="relative w-130 h-8/9 flex flex-col justify-between">
-        <div id="todo-container" class="w-130 flex-1 overflow-y-auto">
+        <div id="todo-container" class="w-130 flex-1 overflow-y-auto overflow-x-hidden">
           <div
-            id="todo"
+            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -57,7 +57,7 @@
             <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">Stretch for 5 mins</p>
           </div>
          <div
-            id="todo"
+            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -78,7 +78,7 @@
             <p class="task-text font-sans -ml-1 text-[15px] font-normal text-ink">5 Pushups</p>
           </div>
           <div
-            id="todo"
+            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
@@ -100,7 +100,7 @@
           </div>
 
           <div
-            id="todo"
+            
             class="todo-row animate-enter w-full h-13 rounded-xl bg-card flex items-center mb-2.5 cursor-pointer"
             aria-checked="false"
             tabindex="0"
